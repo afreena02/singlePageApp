@@ -81,12 +81,6 @@
                                 let imageUrl = user.photo_url ? `${user.photo_url}` :
                                     "https://via.placeholder.com/50";
 
-                                // Check if the URL needs to be adjusted for the website project storage path
-                                if (user.photo_url && !user.photo_url.startsWith('http')) {
-                                    imageUrl =
-                                        `http://your-website-url.com/storage/${user.photo_url}`;
-                                }
-
                                 usersHtml += `
     <tr>
         <td>

@@ -31,7 +31,8 @@ class UserController extends Controller
                     'id' => $user->id,
                     'name' => $user->first_name . ' ' . $user->last_name, // Fix name
                     'email' => $user->email,
-                    'photo_url' => $user->image_url ? asset('storage/' . $user->image_url) : asset('images/default-avatar.jpg'), // Fix image path
+                    'photo_url' => $user->image_url ? config('app.base_url') . '/storage/' . $user->image_url : asset('images/default-avatar.jpg'),
+                    'image_url' => $user->image_url,
                     'position' => $user->position,
                     'role' => $user->role ? $user->role->title : 'N/A' // Fix role
                 ];

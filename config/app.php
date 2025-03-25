@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'base_url' => env('BASE_URL', 'http://userapplication.test'),
 
     /*
     |--------------------------------------------------------------------------
